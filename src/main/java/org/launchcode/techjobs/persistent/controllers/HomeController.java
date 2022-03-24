@@ -64,16 +64,15 @@ public class HomeController {
             Employer employer = optEmployer.get();
             newJob.setEmployer(employer);
             jobRepository.save(newJob);
+        }
             model.addAttribute("jobs", optEmployer);
+
             List<Skill> skillObjs = (List<Skill>) skillRepository.findAllById(skills);
-            if (!skillObjs.isEmpty()) {
+
                 newJob.setSkills(skillObjs);
                 model.addAttribute("skills", skillObjs);
                 return "redirect:";
             }
-        }
-        return "add";
-    }
 
 
     @GetMapping("view/{jobId}")

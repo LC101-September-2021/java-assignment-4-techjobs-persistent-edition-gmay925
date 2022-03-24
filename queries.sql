@@ -1,9 +1,9 @@
 -- Part 1: Test it with SQ;
 CREATE TABLE job (
-id int,
-employer varchar(100),
-name varchar(100),
-skill varchar(120)
+id INTEGER PRIMARY KEY AUTO_INCREMENT,
+employer VARCHAR(100),
+name VARCHAR(100),
+skills VARCHAR(120)
 );
 -- Part 2: Test it with SQL
 SELECT name
